@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil — EventPro</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.47.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top ep-navbar" id="mainNavbar">
+  <div class="container-fluid px-4 px-lg-5">
+    <a class="navbar-brand ep-logo" href="index.html">Event<span>Pro</span></a>
+    <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      <i class="ti ti-menu-2 fs-3"></i>
+    </button>
+    <div class="collapse navbar-collapse d-none d-lg-flex">
+      <ul class="navbar-nav mx-auto ep-nav-links">
+        <li class="nav-item"><a class="nav-link" href="index.html">Bosh sahifa</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Tadbirlar</a></li>
+        <li class="nav-item"><a class="nav-link" href="organizer-dashboard.html">Tashkilotchilar</a></li>
+      </ul>
+      <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=100&auto=format&fit=crop" class="ep-avatar-lg" style="width:38px;height:38px;">
+    </div>
+  </div>
+</nav>
+<div class="offcanvas offcanvas-start ep-offcanvas" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header"><a class="navbar-brand ep-logo" href="index.html">Event<span>Pro</span></a><button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+  <div class="offcanvas-body">  
+    <a href="index.html" class="list-group-item ep-mobile-list"><i class="ti ti-home me-3"></i>Bosh sahifa</a>
+    <a href="events.html" class="list-group-item ep-mobile-list"><i class="ti ti-calendar-event me-3"></i>Tadbirlar</a>
+  </div>
+</div>
+
+<div class="container" style="padding-top:120px;padding-bottom:80px;">
+  <div class="row g-4">
+    <!-- SIDEBAR -->
+    <div class="col-lg-3">
+      <div class="ep-filter-panel">
+        <div class="ep-profile-header">
+          <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop" class="ep-avatar-lg">
+          <div>
+            <div class="fw-600">Jasur Tojiyev</div>
+            <div class="ep-muted small">jasur.t@email.com</div>
+          </div>
+        </div>
+        <div class="list-group list-group-flush ep-mobile-list">
+          <a href="#tab-info" data-bs-toggle="pill" class="list-group-item active"><i class="ti ti-user me-3"></i>Shaxsiy ma'lumotlar</a>
+          <a href="#tab-tickets" data-bs-toggle="pill" class="list-group-item"><i class="ti ti-ticket me-3"></i>Chiptalarim</a>
+          <a href="#tab-fav" data-bs-toggle="pill" class="list-group-item"><i class="ti ti-heart me-3"></i>Sevimlilar</a>
+          <a href="#tab-notif" data-bs-toggle="pill" class="list-group-item"><i class="ti ti-bell me-3"></i>Bildirishnomalar</a>
+          <a href="#tab-settings" data-bs-toggle="pill" class="list-group-item"><i class="ti ti-settings me-3"></i>Sozlamalar</a>
+          <a href="index.html" class="list-group-item"><i class="ti ti-logout me-3"></i>Chiqish</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="col-lg-9">
+      <div class="tab-content">
+
+        <!-- SHAXSIY MA'LUMOTLAR -->
+        <div class="tab-pane fade show active" id="tab-info">
+          <div class="ep-form-panel">
+            <h5 class="mb-4" style="font-weight:600;">Shaxsiy ma'lumotlar</h5>
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop" class="ep-avatar-lg" style="width:72px;height:72px;">
+              <button class="btn ep-btn-ghost btn-sm">Rasmni o'zgartirish</button>
+            </div>
+            <div class="row g-3">
+              <div class="col-md-6"><div class="form-floating"><input class="form-control" value="Jasur"><label>Ism</label></div></div>
+              <div class="col-md-6"><div class="form-floating"><input class="form-control" value="Tojiyev"><label>Familiya</label></div></div>
+              <div class="col-md-6"><div class="form-floating"><input class="form-control" value="+998 90 123 45 67"><label>Telefon</label></div></div>
+              <div class="col-md-6"><div class="form-floating"><input class="form-control" value="jasur.t@email.com"><label>Email</label></div></div>
+              <div class="col-md-6"><div class="form-floating"><input type="date" class="form-control" value="1995-04-12"><label>Tug'ilgan sana</label></div></div>
+            </div>
+            <button class="btn ep-btn-primary mt-4">Saqlash</button>
+          </div>
+        </div>
+
+        <!-- CHIPTALARIM -->
+        <div class="tab-pane fade" id="tab-tickets">
+          <ul class="nav ep-tabs mb-4">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tActive">Faol</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tPast">O'tgan</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tCancelled">Bekor qilingan</button></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="tActive">
+              <div class="ep-ticket-card">
+                <img src="https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?q=80&w=300&auto=format&fit=crop">
+                <div class="perforation"></div>
+                <div class="body d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <div>
+                    <div class="fw-600">Yulduzlar kechasi</div>
+                    <div class="ep-muted small">12-avgust, 19:00 — Humo Arena</div>
+                  </div>
+                  <button class="ep-event-cta">Ko'rish</button>
+                </div>
+              </div>
+              <div class="ep-ticket-card">
+                <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=300&auto=format&fit=crop">
+                <div class="perforation"></div>
+                <div class="body d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <div>
+                    <div class="fw-600">Digital Business Forum</div>
+                    <div class="ep-muted small">16-avgust, 10:00 — Business Hub</div>
+                  </div>
+                  <button class="ep-event-cta">Ko'rish</button>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tPast">
+              <div class="ep-ticket-card" style="opacity:.6;">
+                <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=300&auto=format&fit=crop">
+                <div class="perforation"></div>
+                <div class="body d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <div>
+                    <div class="fw-600">Stand-up Comedy Show</div>
+                    <div class="ep-muted small">2-avgust — Ilkhom teatri</div>
+                  </div>
+                  <span class="ep-status ep-status-done">Yakunlangan</span>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tCancelled">
+              <p class="ep-muted">Bekor qilingan chiptalar mavjud emas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEVIMLILAR -->
+        <div class="tab-pane fade" id="tab-fav">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="ep-event-card">
+                <div class="ep-event-img" style="background-image:url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=600&auto=format&fit=crop')">
+                  <button class="ep-fav-btn"><i class="ti ti-heart-filled" style="color:var(--pink);"></i></button>
+                </div>
+                <div class="ep-event-body">
+                  <div class="ep-event-cat">Sport</div>
+                  <div class="ep-event-title">Chempionlar kubogi</div>
+                  <div class="ep-event-footer"><span class="ep-event-price">80 000 so'm</span><a href="#" class="ep-event-cta">Ko'rish</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="ep-event-card">
+                <div class="ep-event-img" style="background-image:url('https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=600&auto=format&fit=crop')">
+                  <button class="ep-fav-btn"><i class="ti ti-heart-filled" style="color:var(--pink);"></i></button>
+                </div>
+                <div class="ep-event-body">
+                  <div class="ep-event-cat">Ko'ngilochar</div>
+                  <div class="ep-event-title">Stand-up Comedy Show</div>
+                  <div class="ep-event-footer"><span class="ep-event-price">120 000 so'm</span><a href="#" class="ep-event-cta">Ko'rish</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BILDIRISHNOMALAR -->
+        <div class="tab-pane fade" id="tab-notif">
+          <div class="ep-form-panel" style="padding:0;">
+            <div class="ep-notif-item">
+              <div class="ep-notif-icon" style="background:rgba(124,58,237,0.15);color:var(--purple);"><i class="ti ti-ticket"></i></div>
+              <div class="flex-grow-1">
+                <div class="fw-600" style="font-size:14px;">Chipta tasdiqlandi</div>
+                <div class="ep-muted small">"Yulduzlar kechasi" uchun chiptangiz tasdiqlandi</div>
+                <div class="ep-muted" style="font-size:12px;">2 soat oldin</div>
+              </div>
+              <div class="ep-notif-dot"></div>
+            </div>
+            <div class="ep-notif-item">
+              <div class="ep-notif-icon" style="background:rgba(236,72,153,0.15);color:var(--pink);"><i class="ti ti-discount-2"></i></div>
+              <div class="flex-grow-1">
+                <div class="fw-600" style="font-size:14px;">Yangi chegirma</div>
+                <div class="ep-muted small">Talabalar uchun -30% chegirma faollashtirildi</div>
+                <div class="ep-muted" style="font-size:12px;">Kecha</div>
+              </div>
+            </div>
+            <div class="ep-notif-item">
+              <div class="ep-notif-icon" style="background:rgba(56,189,248,0.15);color:var(--sky);"><i class="ti ti-calendar"></i></div>
+              <div class="flex-grow-1">
+                <div class="fw-600" style="font-size:14px;">Eslatma</div>
+                <div class="ep-muted small">"Digital Business Forum" ertaga soat 10:00 da boshlanadi</div>
+                <div class="ep-muted" style="font-size:12px;">3 kun oldin</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SOZLAMALAR -->
+        <div class="tab-pane fade" id="tab-settings">
+          <div class="ep-form-panel">
+            <div class="accordion ep-program-accordion" id="settingsAcc">
+              <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#sTil">Til</button></h2>
+                <div id="sTil" class="accordion-collapse collapse show" data-bs-parent="#settingsAcc">
+                  <div class="accordion-body">
+                    <select class="form-select"><option>O'zbekcha</option><option>Русский</option><option>English</option></select>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#sBild">Bildirishnoma sozlamalari</button></h2>
+                <div id="sBild" class="accordion-collapse collapse" data-bs-parent="#settingsAcc">
+                  <div class="accordion-body">
+                    <div class="form-check form-switch mb-2"><input class="form-check-input" type="checkbox" checked><label class="form-check-label ep-muted">Email orqali bildirishnoma</label></div>
+                    <div class="form-check form-switch mb-2"><input class="form-check-input" type="checkbox" checked><label class="form-check-label ep-muted">SMS orqali bildirishnoma</label></div>
+                    <div class="form-check form-switch"><input class="form-check-input" type="checkbox"><label class="form-check-label ep-muted">Marketing xabarlari</label></div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#sMaxfiy">Maxfiylik</button></h2>
+                <div id="sMaxfiy" class="accordion-collapse collapse" data-bs-parent="#settingsAcc">
+                  <div class="accordion-body ep-muted">Profil ma'lumotlaringiz faqat siz ruxsat bergan tashkilotchilarga ko'rinadi.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#sDelete">Hisobni o'chirish</button></h2>
+                <div id="sDelete" class="accordion-collapse collapse" data-bs-parent="#settingsAcc">
+                  <div class="accordion-body">
+                    <p class="ep-muted">Hisobingizni o'chirish qaytarib bo'lmaydigan amal.</p>
+                    <button class="btn" style="background:rgba(239,68,68,0.15);color:#EF4444;border-radius:999px;padding:10px 20px;border:none;">Hisobni o'chirish</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('mainNavbar').style.background = window.scrollY > 40 ? 'rgba(15,10,31,0.92)' : 'rgba(15,10,31,0.7)';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chipta xarid qilish — EventPro</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.47.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top ep-navbar" id="mainNavbar">
+  <div class="container-fluid px-4 px-lg-5">
+    <a class="navbar-brand ep-logo" href="index.html">Event<span>Pro</span></a>
+    <div class="d-flex align-items-center gap-3 ms-auto">
+      <span class="ep-muted small d-none d-md-block">Xavfsiz to'lov <i class="ti ti-shield-check text-success ms-1"></i></span>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="padding-top:130px;padding-bottom:80px;">
+
+  <!-- PROGRESS STEPS -->
+  <div class="ep-steps">
+    <div class="ep-step done"><div class="ep-step-circle"><i class="ti ti-check"></i></div><div class="ep-step-label">Chipta</div></div>
+    <div class="ep-step active"><div class="ep-step-circle">2</div><div class="ep-step-label">Ma'lumotlar</div></div>
+    <div class="ep-step"><div class="ep-step-circle">3</div><div class="ep-step-label">To'lov</div></div>
+    <div class="ep-step"><div class="ep-step-circle">4</div><div class="ep-step-label">Tasdiqlash</div></div>
+  </div>
+
+  <div class="row g-5">
+    <!-- LEFT: FORM AREA -->
+    <div class="col-lg-7">
+
+      <!-- STEP TABS DEMO (chipta turlari) -->
+      <div class="ep-form-panel mb-4">
+        <h5 class="mb-3" style="font-weight:600;">Chipta turini tanlang</h5>
+        <ul class="nav ep-tabs mb-3">
+          <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tOddiy">Oddiy</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tVip">VIP</button></li>
+          <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tPrem">Premium</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="tOddiy">
+            <div class="ep-ticket-option selected">
+              <div><div class="fw-600">Oddiy chipta</div><div class="ep-muted small">150 000 so'm / dona</div></div>
+              <div class="ep-qty-control"><button>−</button><span>1</span><button>+</button></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tVip">
+            <div class="ep-ticket-option">
+              <div><div class="fw-600">VIP chipta</div><div class="ep-muted small">350 000 so'm / dona</div></div>
+              <div class="ep-qty-control"><button>−</button><span>0</span><button>+</button></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tPrem">
+            <div class="ep-ticket-option">
+              <div><div class="fw-600">Premium + backstage</div><div class="ep-muted small">600 000 so'm / dona</div></div>
+              <div class="ep-qty-control"><button>−</button><span>0</span><button>+</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOYDALANUVCHI MA'LUMOTLARI -->
+      <div class="ep-form-panel mb-4">
+        <h5 class="mb-3" style="font-weight:600;">Shaxsiy ma'lumotlar</h5>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="text" class="form-control" placeholder="Ism" id="fname">
+              <label for="fname">Ism</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="text" class="form-control" placeholder="Familiya" id="lname">
+              <label for="lname">Familiya</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="tel" class="form-control" placeholder="+998 90 123 45 67" id="phone">
+              <label for="phone">Telefon raqam</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="email" class="form-control" placeholder="email@example.com" id="email">
+              <label for="email">Email</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROMO -->
+      <div class="ep-form-panel mb-4">
+        <h5 class="mb-3" style="font-weight:600;">Promo-kod</h5>
+        <div class="ep-input-group">
+          <input type="text" placeholder="Promo-kodni kiriting">
+          <button>Qo'llash</button>
+        </div>
+      </div>
+
+      <!-- TO'LOV USULI -->
+      <div class="ep-form-panel mb-4">
+        <h5 class="mb-3" style="font-weight:600;">To'lov usuli</h5>
+        <div class="ep-pay-method selected"><i class="ti ti-credit-card"></i><span>Uzcard / Humo</span></div>
+        <div class="ep-pay-method"><i class="ti ti-brand-paypal"></i><span>Payme</span></div>
+        <div class="ep-pay-method"><i class="ti ti-wallet"></i><span>Click</span></div>
+
+        <div class="row g-3 mt-2">
+          <div class="col-12">
+            <div class="form-floating">
+              <input type="text" class="form-control" placeholder="0000 0000 0000 0000" id="cardnum">
+              <label for="cardnum">Karta raqami</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-floating">
+              <input type="text" class="form-control" placeholder="OO/YY" id="cardexp">
+              <label for="cardexp">Amal qilish muddati</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-floating">
+              <input type="text" class="form-control" placeholder="123" id="cardcvv">
+              <label for="cardcvv">CVV</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="btn ep-btn-primary w-100" data-bs-toggle="modal" data-bs-target="#successModal">To'lovni yakunlash</a>
+    </div>
+
+    <!-- RIGHT: ORDER SUMMARY -->
+    <div class="col-lg-5">
+      <div class="ep-sticky-card">
+        <div class="d-flex gap-3 align-items-center mb-3">
+          <img src="https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?q=80&w=200&auto=format&fit=crop" style="width:64px;height:64px;border-radius:12px;object-fit:cover;">
+          <div>
+            <div class="fw-600">Yulduzlar kechasi</div>
+            <div class="ep-muted small">12-avgust, 19:00 — Humo Arena</div>
+          </div>
+        </div>
+        <hr class="ep-footer-divider">
+        <div class="d-flex justify-content-between mb-2"><span class="ep-muted">Oddiy chipta x1</span><span>150 000 so'm</span></div>
+        <div class="d-flex justify-content-between mb-2"><span class="ep-muted">Xizmat haqi</span><span>10 000 so'm</span></div>
+        <div class="d-flex justify-content-between mb-2"><span class="ep-muted">Chegirma</span><span class="text-success">−0 so'm</span></div>
+        <hr class="ep-footer-divider">
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="fw-600">Jami</span>
+          <span class="ep-sticky-price" style="font-size:22px;">160 000 so'm</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL (bosqich 4) -->
+<div class="modal fade ep-modal" id="successModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="ep-success-box">
+          <div class="ep-success-icon"><i class="ti ti-check"></i></div>
+          <h4 style="font-weight:600;">Chipta muvaffaqiyatli sotib olindi!</h4>
+          <p class="ep-muted">Elektron chiptangiz emailingizga yuborildi</p>
+
+          <div class="ep-e-ticket">
+            <div class="qr-side">
+              <i class="ti ti-qrcode" style="font-size:70px;color:#14101F;"></i>
+            </div>
+            <div class="perforation"></div>
+            <div class="info-side">
+              <div class="fw-600">Yulduzlar kechasi</div>
+              <div class="ep-muted small mb-2">Oddiy chipta · 1 ta</div>
+              <div class="ep-muted small"><i class="ti ti-calendar me-1"></i>12-avgust, 19:00</div>
+              <div class="ep-muted small"><i class="ti ti-map-pin me-1"></i>Humo Arena</div>
+            </div>
+          </div>
+
+          <div class="d-flex gap-2 justify-content-center mt-3">
+            <a href="#" class="btn ep-btn-ghost"><i class="ti ti-download me-1"></i>Yuklab olish</a>
+            <a href="profile.html" class="btn ep-btn-primary">Profilimda ko'rish</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS TOAST -->
+<div class="ep-toast" id="successToast" style="display:none;">
+  <i class="ti ti-circle-check icon"></i>
+  <div>
+    <div class="fw-600" style="font-size:14px;">To'lov muvaffaqiyatli!</div>
+    <div class="ep-muted small">Chipta profilingizga qo'shildi</div>
+  </div>
+  <i class="ti ti-x close-t" onclick="document.getElementById('successToast').style.display='none'"></i>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.getElementById('successModal').addEventListener('shown.bs.modal', () => {
+  const t = document.getElementById('successToast');
+  t.style.display = 'flex';
+  setTimeout(() => t.style.display = 'none', 4000);
+});
+</script>
+</body>
+</html>

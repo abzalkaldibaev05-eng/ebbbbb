@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventPro — O'zbekistondagi tadbirlar platformasi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.47.0/iconfont/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top ep-navbar" id="mainNavbar">
+    <div class="container-fluid px-4 px-lg-5">
+      <a class="navbar-brand ep-logo" href="index.html">Event<span>Pro</span></a>
+
+      <button class="navbar-toggler border-0 text-white ep-menu-toggle" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#mobileMenu" aria-label="Menyuni ochish">
+        <span class="ep-menu-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <div class="collapse navbar-collapse d-none d-lg-flex">
+        <ul class="navbar-nav mx-auto ep-nav-links">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Bosh sahifa</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Tadbirlar</a></li>
+          <li class="nav-item"><a class="nav-link" href="organizer-dashboard.html">Tashkilotchilar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#discounts">Chegirmalar</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <div class="dropdown">
+            <button class="btn ep-lang-btn dropdown-toggle" data-bs-toggle="dropdown">UZ</button>
+            <ul class="dropdown-menu dropdown-menu-end ep-dropdown">
+              <li><a class="dropdown-item" href="#">O'zbekcha</a></li>
+              <li><a class="dropdown-item" href="#">Русский</a></li>
+              <li><a class="dropdown-item" href="#">English</a></li>
+            </ul>
+          </div>
+          <a href="profile.html" class="btn ep-btn-ghost">Kirish</a>
+          <a href="profile.html" class="btn ep-btn-primary">Ro'yxatdan o'tish</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ MOBILE OFFCANVAS ============ -->
+  <div class="offcanvas offcanvas-start ep-offcanvas" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header">
+      <a class="navbar-brand ep-logo" href="index.html">Event<span>Pro</span></a>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div class="list-group list-group-flush ep-mobile-list mb-4">
+        <a href="index.html" class="list-group-item active"><i class="ti ti-home me-3"></i>Bosh sahifa</a>
+        <a href="events.html" class="list-group-item"><i class="ti ti-calendar-event me-3"></i>Tadbirlar</a>
+        <a href="organizer-dashboard.html" class="list-group-item"><i class="ti ti-users me-3"></i>Tashkilotchilar</a>
+        <a href="#discounts" class="list-group-item"><i class="ti ti-discount-2 me-3"></i>Chegirmalar</a>
+        <a href="profile.html" class="list-group-item"><i class="ti ti-ticket me-3"></i>Mening chiptalarim</a>
+        <a href="profile.html#settings" class="list-group-item"><i class="ti ti-settings me-3"></i>Sozlamalar</a>
+      </div>
+      <div class="mt-auto d-flex flex-column gap-2">
+        <a href="profile.html" class="btn ep-btn-ghost w-100">Kirish</a>
+        <a href="profile.html" class="btn ep-btn-primary w-100">Ro'yxatdan o'tish</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <header class="ep-hero">
+    <div class="ep-hero-bg"
+      style="background-image:url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1600&auto=format&fit=crop')">
+    </div>
+    <div class="ep-hero-overlay"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center" style="min-height:640px;">
+        <div class="col-lg-7 py-5">
+          <span class="ep-eyebrow"><i class="ti ti-sparkles me-2"></i>O'zbekistondagi #1 tadbirlar platformasi</span>
+          <h1 class="ep-hero-title mt-3">Har bir tadbir —<br>yangi bir tajriba</h1>
+          <p class="ep-hero-sub">Konsert, seminar, konferensiya va sport tadbirlarini toping, chipta oling, unutilmas
+            lahzalarni yashang.</p>
+
+          <div class="ep-search-bar mt-4">
+            <i class="ti ti-search"></i>
+            <input type="text" placeholder="Tadbir, san'atkor yoki joy qidiring" class="ep-search-input">
+            <span class="ep-search-divider d-none d-md-block"></span>
+            <div class="dropdown d-none d-md-block">
+              <button class="btn ep-search-sub dropdown-toggle" data-bs-toggle="dropdown"><i
+                  class="ti ti-calendar me-1"></i>Sana</button>
+              <ul class="dropdown-menu ep-dropdown">
+                <li><a class="dropdown-item" href="#">Bugun</a></li>
+                <li><a class="dropdown-item" href="#">Bu hafta</a></li>
+                <li><a class="dropdown-item" href="#">Bu oy</a></li>
+              </ul>
+            </div>
+            <button class="btn ep-search-submit"><i class="ti ti-search fs-5"></i></button>
+          </div>
+
+          <div class="row ep-stats mt-5 g-3">
+            <div class="col-4">
+              <div class="ep-stat-num">12,000+</div>
+              <div class="ep-stat-label">Tadbir</div>
+            </div>
+            <div class="col-4">
+              <div class="ep-stat-num">500+</div>
+              <div class="ep-stat-label">Tashkilotchi</div>
+            </div>
+            <div class="col-4">
+              <div class="ep-stat-num">2M+</div>
+              <div class="ep-stat-label">Foydalanuvchi</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 d-none d-lg-block">
+          <div class="ep-float-card ep-float-card-1">
+            <div class="d-flex gap-3 align-items-center">
+              <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=200&auto=format&fit=crop"
+                class="ep-float-thumb">
+              <div>
+                <div class="ep-badge ep-badge-today mb-1">Bugun</div>
+                <div class="fw-600">Jazz kechasi — Toshkent</div>
+                <div class="ep-muted small">19:00, Amir Temur xiyoboni</div>
+              </div>
+            </div>
+          </div>
+          <div class="ep-float-card ep-float-card-2">
+            <div class="d-flex gap-3 align-items-center">
+              <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=200&auto=format&fit=crop"
+                class="ep-float-thumb">
+              <div>
+                <div class="ep-badge ep-badge-week mb-1">Bu hafta</div>
+                <div class="fw-600">Tech Summit 2026</div>
+                <div class="ep-muted small">Samarqand, IT Park</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section class="ep-section">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <h2 class="ep-h2">Kategoriya bo'yicha tanlang</h2>
+      </div>
+      <div class="ep-cat-scroll">
+        <div class="ep-cat-card">
+          <div class="ep-cat-icon"><img
+              src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=200&auto=format&fit=crop"
+              alt="Konsertlar"></div><span>Konsertlar</span>
+        </div>
+        <div class="ep-cat-card">
+          <div class="ep-cat-icon"><img
+              src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=200&auto=format&fit=crop"
+              alt="Seminarlar"></div><span>Seminarlar</span>
+        </div>
+        <div class="ep-cat-card">
+          <div class="ep-cat-icon"><img
+              src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=200&auto=format&fit=crop"
+              alt="Konferensiyalar"></div><span>Konferensiyalar</span>
+        </div>
+        <div class="ep-cat-card">
+          <div class="ep-cat-icon"><img
+              src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=200&auto=format&fit=crop"
+              alt="Sport"></div><span>Sport</span>
+        </div>
+        <div class="ep-cat-card">
+          <div class="ep-cat-icon"><img
+              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=200&auto=format&fit=crop"
+              alt="Ko'ngilochar"></div><span>Ko'ngilochar</span>
+        </div>
+        <div class="ep-cat-card">
+          <div class="ep-cat-icon"><img
+              src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?q=80&w=200&auto=format&fit=crop"
+              alt="Bolalar uchun"></div><span>Bolalar uchun</span>
+        </div>
+        <div class="ep-cat-card">
+          <div class="ep-cat-icon"><img
+              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=200&auto=format&fit=crop"
+              alt="Biznes"></div><span>Biznes</span>
+        </div>
+        <div class="ep-cat-card">
+          <div class="ep-cat-icon"><img
+              src="https://images.unsplash.com/photo-1549490349-8643362247b5?q=80&w=200&auto=format&fit=crop"
+              alt="San'at"></div><span>San'at</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POPULAR EVENTS ============ -->
+  <section class="ep-section" id="discounts">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <h2 class="ep-h2">Eng mashhur tadbirlar</h2>
+        <a href="#" class="ep-link-more">Barchasini ko'rish <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="row g-4" id="popularEvents"></div>
+    </div>
+  </section>
+
+  <!-- ============ UPCOMING EVENTS ============ -->
+  <section class="ep-section">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <h2 class="ep-h2">Tez orada boshlanadi</h2>
+      </div>
+      <div class="ep-upcoming-scroll" id="upcomingEvents"></div>
+    </div>
+  </section>
+
+  <!-- ============ DISCOUNTS ============ -->
+  <section class="ep-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="ep-promo-banner ep-promo-1">
+            <div class="ep-badge ep-badge-discount mb-3">-30% chegirma</div>
+            <h3 class="ep-h3 text-white">Talabalar uchun maxsus narx</h3>
+            <p class="ep-muted-white">Talaba guvohnomasi bilan barcha tadbirlarga chegirma oling</p>
+            <a href="#" class="btn ep-btn-white mt-2">Batafsil <i class="ti ti-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ep-promo-banner ep-promo-2">
+            <div class="ep-badge ep-badge-discount mb-3">-20% chegirma</div>
+            <h3 class="ep-h3 text-white">Guruh chiptalar</h3>
+            <p class="ep-muted-white">5 va undan ortiq chipta xarid qilganda qo'shimcha chegirma</p>
+            <a href="#" class="btn ep-btn-white mt-2">Batafsil <i class="ti ti-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ORGANIZER CTA ============ -->
+  <section class="ep-section">
+    <div class="container">
+      <div class="ep-organizer-block row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format&fit=crop"
+            class="ep-organizer-img">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="ep-h2">Tadbir tashkil qilasizmi?</h2>
+          <p class="ep-body-lg">EventPro orqali tadbiringizni bir necha daqiqada e'lon qiling, chiptalarni onlayn soting
+            va ishtirokchilar statistikasini real vaqtda kuzating.</p>
+          <ul class="ep-check-list">
+            <li><i class="ti ti-check"></i>Chiptalarni onlayn sotish</li>
+            <li><i class="ti ti-check"></i>Real vaqtda statistika</li>
+            <li><i class="ti ti-check"></i>Marketing va targ'ibot vositalari</li>
+          </ul>
+          <a href="#" class="btn ep-btn-primary mt-3">Tadbir yaratish <i class="ti ti-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="ep-final-cta">
+    <div class="container text-center position-relative">
+      <h2 class="ep-h2 text-white">Bugunoq tadbir toping</h2>
+      <p class="ep-muted-white mb-4">Minglab tadbirlar orasidan o'zingizga yoqqanini tanlang</p>
+      <a href="#" class="btn ep-btn-white btn-lg">Tadbirlarni ko'rish <i class="ti ti-arrow-right ms-2"></i></a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="ep-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand ep-logo" href="#">Event<span>Pro</span></a>
+          <p class="ep-muted mt-3">O'zbekistonda konsert, seminar, konferensiya, sport va ko'ngilochar tadbirlarni
+            topish va chipta sotib olish uchun zamonaviy platforma.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#" class="ep-social"><i class="ti ti-brand-instagram"></i></a>
+            <a href="#" class="ep-social"><i class="ti ti-brand-telegram"></i></a>
+            <a href="#" class="ep-social"><i class="ti ti-brand-facebook"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h6 class="ep-footer-title">Sahifalar</h6>
+          <ul class="ep-footer-list">
+            <li><a href="#">Bosh sahifa</a></li>
+            <li><a href="#">Tadbirlar</a></li>
+            <li><a href="#">Tashkilotchilar</a></li>
+            <li><a href="#">Chegirmalar</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h6 class="ep-footer-title">Yordam</h6>
+          <ul class="ep-footer-list">
+            <li><a href="#">Aloqa</a></li>
+            <li><a href="#">Ko'p so'raladigan savollar</a></li>
+            <li><a href="#">Foydalanish shartlari</a></li>
+            <li><a href="#">Maxfiylik siyosati</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6 class="ep-footer-title">Yangiliklarga obuna bo'ling</h6>
+          <div class="ep-newsletter mt-2">
+            <input type="email" placeholder="Email manzilingiz">
+            <button><i class="ti ti-send"></i></button>
+          </div>
+        </div>
+      </div>
+      <hr class="ep-footer-divider">
+      <p class="ep-muted small mb-0">© 2026 EventPro. Barcha huquqlar himoyalangan.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

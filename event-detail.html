@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yulduzlar kechasi — EventPro</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.47.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top ep-navbar" id="mainNavbar">
+  <div class="container-fluid px-4 px-lg-5">
+    <a class="navbar-brand ep-logo" href="index.html">Event<span>Pro</span></a>
+    <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      <i class="ti ti-menu-2 fs-3"></i>
+    </button>
+    <div class="collapse navbar-collapse d-none d-lg-flex">
+      <ul class="navbar-nav mx-auto ep-nav-links">
+        <li class="nav-item"><a class="nav-link" href="index.html">Bosh sahifa</a></li>
+        <li class="nav-item"><a class="nav-link active" href="events.html">Tadbirlar</a></li>
+        <li class="nav-item"><a class="nav-link" href="organizer-dashboard.html">Tashkilotchilar</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Chegirmalar</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <a href="profile.html" class="btn ep-btn-ghost">Kirish</a>
+        <a href="#" class="btn ep-btn-primary">Ro'yxatdan o'tish</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-start ep-offcanvas" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header">
+    <a class="navbar-brand ep-logo" href="index.html">Event<span>Pro</span></a>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div class="list-group list-group-flush ep-mobile-list mb-4">
+      <a href="index.html" class="list-group-item"><i class="ti ti-home me-3"></i>Bosh sahifa</a>
+      <a href="events.html" class="list-group-item active"><i class="ti ti-calendar-event me-3"></i>Tadbirlar</a>
+      <a href="profile.html" class="list-group-item"><i class="ti ti-ticket me-3"></i>Mening chiptalarim</a>
+    </div>
+  </div>
+</div>
+
+<div class="container ep-breadcrumb">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Bosh sahifa</a></li>
+      <li class="breadcrumb-item"><a href="events.html">Tadbirlar</a></li>
+      <li class="breadcrumb-item active">Yulduzlar kechasi</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- ============ BANNER ============ -->
+<div class="container">
+  <div class="ep-detail-banner" style="background-image:url('https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?q=80&w=1600&auto=format&fit=crop')">
+    <div class="ep-detail-top-actions">
+      <button class="ep-icon-btn"><i class="ti ti-heart"></i></button>
+      <button class="ep-icon-btn"><i class="ti ti-share-2"></i></button>
+    </div>
+    <div class="ep-detail-banner-content">
+      <span class="ep-badge ep-badge-today">Konsert</span>
+      <h1 class="ep-detail-title">Yulduzlar kechasi — Live konsert</h1>
+      <div class="ep-detail-meta-row">
+        <span class="item"><i class="ti ti-calendar"></i>12-avgust 2026, 19:00</span>
+        <span class="item"><i class="ti ti-map-pin"></i>Humo Arena, Toshkent</span>
+        <span class="item"><i class="ti ti-user-circle"></i>Tashkilotchi: Star Events LLC</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ep-gallery-thumbs">
+    <img src="https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?q=80&w=300&auto=format&fit=crop">
+    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=300&auto=format&fit=crop">
+    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=300&auto=format&fit=crop">
+    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=300&auto=format&fit=crop">
+    <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=300&auto=format&fit=crop">
+  </div>
+
+  <div class="row g-5 mt-2">
+    <!-- LEFT COLUMN -->
+    <div class="col-lg-8">
+      <div class="ep-detail-section">
+        <h3>Tadbir haqida</h3>
+        <p class="ep-body-lg">Yilning eng katta musiqiy kechasi — O'zbekistonning eng sevimli qo'shiqchilari bir sahnada. Zamonaviy yorug'lik shousi, jonli orkestr va unutilmas atmosfera sizni kutmoqda. Oilangiz yoki do'stlaringiz bilan kelib, ajoyib oqshomdan bahramand bo'ling.</p>
+      </div>
+
+      <div class="ep-detail-section">
+        <h3>Dastur</h3>
+        <div class="accordion ep-program-accordion" id="programAcc">
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#p1">18:00 — Eshiklar ochiladi</button></h2>
+            <div id="p1" class="accordion-collapse collapse show" data-bs-parent="#programAcc"><div class="accordion-body">Mehmonlar zalga kirib, o'z o'rinlarini egallashlari mumkin. Foye qismida fotozоna faoliyat yuritadi.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p2">19:00 — Asosiy dastur boshlanadi</button></h2>
+            <div id="p2" class="accordion-collapse collapse" data-bs-parent="#programAcc"><div class="accordion-body">Konsert rasmiy ochilishi va birinchi ijrochilarning chiqishi.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p3">21:30 — Tanaffus</button></h2>
+            <div id="p3" class="accordion-collapse collapse" data-bs-parent="#programAcc"><div class="accordion-body">15 daqiqalik tanaffus, foyeda ichimliklar sotiladi.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#p4">23:00 — Dastur yakuni</button></h2>
+            <div id="p4" class="accordion-collapse collapse" data-bs-parent="#programAcc"><div class="accordion-body">Yakuniy qo'shiq va fейерверк shousi bilan kecha nihoyasiga yetadi.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ep-detail-section">
+        <h3>Tashkilotchi</h3>
+        <div class="ep-organizer-row">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop">
+          <div class="flex-grow-1">
+            <div class="fw-600">Star Events LLC</div>
+            <div class="ep-muted small">O'zbekistondagi yetakchi tadbir tashkilotchisi, 2015 yildan buyon</div>
+          </div>
+          <a href="#" class="ep-event-cta">Boshqa tadbirlarini ko'rish</a>
+        </div>
+      </div>
+
+      <div class="ep-detail-section">
+        <h3>Mehmonlar</h3>
+        <div class="ep-guest-scroll">
+          <div class="ep-guest-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"><div class="name">Dilnoza Karimova</div></div>
+          <div class="ep-guest-card"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop"><div class="name">Sardor Rahimov</div></div>
+          <div class="ep-guest-card"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=200&auto=format&fit=crop"><div class="name">Madina Yusupova</div></div>
+          <div class="ep-guest-card"><img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop"><div class="name">Jasur Tojiyev</div></div>
+        </div>
+      </div>
+
+      <div class="ep-detail-section">
+        <h3>Sharhlar <span class="ep-muted">(4.8 <i class="ti ti-star-filled" style="color:#F59E0B;font-size:14px;"></i> · 214 ta sharh)</span></h3>
+        <div class="ep-review-card">
+          <div class="ep-review-stars"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
+          <div class="fw-600 mb-1">Aziza N.</div>
+          <p class="ep-muted mb-0" style="font-size:14px;">Ajoyib tashkil etilgan tadbir edi, ovoz va yorug'lik sifati zo'r. Albatta yana boraman!</p>
+        </div>
+        <div class="ep-review-card">
+          <div class="ep-review-stars"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star"></i></div>
+          <div class="fw-600 mb-1">Bobur T.</div>
+          <p class="ep-muted mb-0" style="font-size:14px;">Juda yoqdi, faqat parkovka joyi kamroq edi. Umuman olganda tavsiya qilaman.</p>
+        </div>
+        <button class="btn ep-btn-ghost mt-2">Sharh qoldirish</button>
+      </div>
+    </div>
+
+    <!-- RIGHT STICKY COLUMN -->
+    <div class="col-lg-4">
+      <div class="ep-sticky-card">
+        <div class="ep-muted small mb-1">Narx (boshlang'ich)</div>
+        <div class="ep-sticky-price mb-3">150 000 so'm</div>
+        <div class="ep-event-meta mb-2"><i class="ti ti-calendar"></i>12-avgust 2026, 19:00</div>
+        <div class="ep-event-meta mb-2"><i class="ti ti-map-pin"></i>Humo Arena, Toshkent</div>
+        <div class="ep-progress-slot my-3">
+          <div class="d-flex justify-content-between small ep-muted mb-1"><span>Faqat 45 ta chipta qoldi</span><span>90%</span></div>
+          <div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+        </div>
+        <button class="btn ep-btn-primary w-100" data-bs-toggle="modal" data-bs-target="#ticketModal">Chipta olish</button>
+      </div>
+      <div class="ep-sticky-card mt-4">
+        <div class="fw-600 mb-2"><i class="ti ti-map-2 me-2"></i>Manzil</div>
+        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=500&auto=format&fit=crop" style="width:100%;border-radius:12px;height:140px;object-fit:cover;">
+        <div class="ep-muted small mt-2">Amir Temur ko'chasi 1, Toshkent shahri</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="height:100px;"></div>
+
+<!-- MOBILE STICKY BUY BAR -->
+<div class="ep-mobile-buy-bar d-lg-none">
+  <div>
+    <div class="ep-muted small">Narx</div>
+    <div class="fw-600">150 000 so'm</div>
+  </div>
+  <button class="btn ep-btn-primary" data-bs-toggle="modal" data-bs-target="#ticketModal">Chipta olish</button>
+</div>
+
+<!-- ============ TICKET MODAL ============ -->
+<div class="modal fade ep-modal" id="ticketModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Chipta olish</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex gap-3 align-items-center mb-3">
+          <img src="https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?q=80&w=200&auto=format&fit=crop" style="width:56px;height:56px;border-radius:10px;object-fit:cover;">
+          <div>
+            <div class="fw-600">Yulduzlar kechasi</div>
+            <div class="ep-muted small">12-avgust, 19:00 — Humo Arena</div>
+          </div>
+        </div>
+
+        <div class="ep-ticket-option selected">
+          <div>
+            <div class="fw-600">Oddiy chipta</div>
+            <div class="ep-muted small">150 000 so'm</div>
+          </div>
+          <div class="ep-qty-control">
+            <button>−</button><span>1</span><button>+</button>
+          </div>
+        </div>
+        <div class="ep-ticket-option">
+          <div>
+            <div class="fw-600">VIP chipta</div>
+            <div class="ep-muted small">350 000 so'm</div>
+          </div>
+          <div class="ep-qty-control">
+            <button>−</button><span>0</span><button>+</button>
+          </div>
+        </div>
+
+        <hr class="ep-footer-divider">
+        <div class="d-flex justify-content-between">
+          <span class="ep-muted">Jami</span>
+          <span class="fw-600 fs-5">150 000 so'm</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="checkout.html" class="btn ep-btn-primary w-100">Davom etish</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('mainNavbar').style.background = window.scrollY > 40 ? 'rgba(15,10,31,0.92)' : 'rgba(15,10,31,0.7)';
+});
+</script>
+</body>
+</html>

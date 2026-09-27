@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tadbirlar — EventPro</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.47.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top ep-navbar" id="mainNavbar">
+  <div class="container-fluid px-4 px-lg-5">
+    <a class="navbar-brand ep-logo" href="index.html">Event<span>Pro</span></a>
+    <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      <i class="ti ti-menu-2 fs-3"></i>
+    </button>
+    <div class="collapse navbar-collapse d-none d-lg-flex">
+      <ul class="navbar-nav mx-auto ep-nav-links">
+        <li class="nav-item"><a class="nav-link" href="index.html">Bosh sahifa</a></li>
+        <li class="nav-item"><a class="nav-link active" href="events.html">Tadbirlar</a></li>
+        <li class="nav-item"><a class="nav-link" href="organizer-dashboard.html">Tashkilotchilar</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Chegirmalar</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <div class="dropdown">
+          <button class="btn ep-lang-btn dropdown-toggle" data-bs-toggle="dropdown">UZ</button>
+          <ul class="dropdown-menu dropdown-menu-end ep-dropdown">
+            <li><a class="dropdown-item" href="#">O'zbekcha</a></li>
+            <li><a class="dropdown-item" href="#">Русский</a></li>
+            <li><a class="dropdown-item" href="#">English</a></li>
+          </ul>
+        </div>
+        <a href="profile.html" class="btn ep-btn-ghost">Kirish</a>
+        <a href="#" class="btn ep-btn-primary">Ro'yxatdan o'tish</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-start ep-offcanvas" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header">
+    <a class="navbar-brand ep-logo" href="index.html">Event<span>Pro</span></a>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div class="list-group list-group-flush ep-mobile-list mb-4">
+      <a href="index.html" class="list-group-item"><i class="ti ti-home me-3"></i>Bosh sahifa</a>
+      <a href="events.html" class="list-group-item active"><i class="ti ti-calendar-event me-3"></i>Tadbirlar</a>
+      <a href="organizer-dashboard.html" class="list-group-item"><i class="ti ti-users me-3"></i>Tashkilotchilar</a>
+      <a href="#" class="list-group-item"><i class="ti ti-discount-2 me-3"></i>Chegirmalar</a>
+      <a href="profile.html" class="list-group-item"><i class="ti ti-ticket me-3"></i>Mening chiptalarim</a>
+    </div>
+    <div class="mt-auto d-flex flex-column gap-2">
+      <a href="#" class="btn ep-btn-ghost w-100">Kirish</a>
+      <a href="#" class="btn ep-btn-primary w-100">Ro'yxatdan o'tish</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ BREADCRUMB ============ -->
+<div class="container ep-breadcrumb">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Bosh sahifa</a></li>
+      <li class="breadcrumb-item active">Tadbirlar</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- ============ PAGE HEADER ============ -->
+<div class="container ep-page-header">
+  <div class="d-flex justify-content-between align-items-end flex-wrap gap-3">
+    <div>
+      <h1 class="ep-h2">Barcha tadbirlar</h1>
+      <p class="ep-results-count mt-1">1,248 ta tadbir topildi</p>
+    </div>
+    <div class="d-flex gap-2 align-items-center">
+      <button class="btn ep-sort-btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas">
+        <i class="ti ti-adjustments-horizontal me-1"></i>Filtr
+      </button>
+      <div class="dropdown">
+        <button class="btn ep-sort-btn dropdown-toggle" data-bs-toggle="dropdown">
+          <i class="ti ti-arrows-sort me-1"></i>Ommabopligi bo'yicha
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end ep-dropdown">
+          <li><a class="dropdown-item" href="#">Ommabopligi bo'yicha</a></li>
+          <li><a class="dropdown-item" href="#">Sana bo'yicha (yaqin)</a></li>
+          <li><a class="dropdown-item" href="#">Narx: arzondan qimmatga</a></li>
+          <li><a class="dropdown-item" href="#">Narx: qimmatdan arzonga</a></li>
+          <li><a class="dropdown-item" href="#">Yangi qo'shilganlar</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex gap-2 flex-wrap mt-3">
+    <span class="ep-chip">Toshkent <i class="ti ti-x"></i></span>
+    <span class="ep-chip">Bu hafta <i class="ti ti-x"></i></span>
+    <span class="ep-chip">Konsertlar <i class="ti ti-x"></i></span>
+  </div>
+</div>
+
+<!-- ============ MAIN CONTENT ============ -->
+<div class="container pb-5">
+  <div class="row g-4">
+    <!-- Filter sidebar - desktop -->
+    <div class="col-lg-3 d-none d-lg-block">
+      <div class="ep-filter-panel">
+        <h5 class="mb-3" style="font-size:16px;font-weight:600;">Filtrlar</h5>
+        <div class="accordion" id="filterAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#fSana">Sana</button></h2>
+            <div id="fSana" class="accordion-collapse collapse show" data-bs-parent="#filterAccordion">
+              <div class="accordion-body">
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="d1"><label class="form-check-label" for="d1">Bugun</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="d2"><label class="form-check-label" for="d2">Ertaga</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="d3" checked><label class="form-check-label" for="d3">Bu hafta</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="d4"><label class="form-check-label" for="d4">Bu oy</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fJoy">Joylashuv</button></h2>
+            <div id="fJoy" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
+              <div class="accordion-body">
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="j1" checked><label class="form-check-label" for="j1">Toshkent</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="j2"><label class="form-check-label" for="j2">Samarqand</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="j3"><label class="form-check-label" for="j3">Buxoro</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="j4"><label class="form-check-label" for="j4">Andijon</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fKat">Kategoriya</button></h2>
+            <div id="fKat" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
+              <div class="accordion-body">
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="k1" checked><label class="form-check-label" for="k1">Konsertlar</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="k2"><label class="form-check-label" for="k2">Seminarlar</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="k3"><label class="form-check-label" for="k3">Konferensiyalar</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="k4"><label class="form-check-label" for="k4">Sport</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fNarx">Narx</button></h2>
+            <div id="fNarx" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
+              <div class="accordion-body">
+                <input type="range" class="form-range" min="0" max="2000000" value="800000">
+                <div class="d-flex justify-content-between ep-muted small"><span>0 so'm</span><span>2 000 000 so'm</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="ep-clear-btn mt-3">Filtrlarni tozalash</button>
+      </div>
+    </div>
+
+    <!-- Events grid -->
+    <div class="col-lg-9">
+      <div class="row g-4" id="eventsGrid"></div>
+
+      <div class="ep-pagination">
+        <button class="ep-page-btn"><i class="ti ti-chevron-left"></i></button>
+        <button class="ep-page-btn active">1</button>
+        <button class="ep-page-btn">2</button>
+        <button class="ep-page-btn">3</button>
+        <button class="ep-page-btn">4</button>
+        <button class="ep-page-btn"><i class="ti ti-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Filter Offcanvas - mobile -->
+<div class="offcanvas offcanvas-bottom ep-offcanvas" style="height:80vh;" tabindex="-1" id="filterOffcanvas">
+  <div class="offcanvas-header">
+    <h5>Filtrlar</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="ep-filter-panel" style="border:none;padding:0;">
+      <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="md1" checked><label class="form-check-label" for="md1">Bugun</label></div>
+      <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="md2"><label class="form-check-label" for="md2">Bu hafta</label></div>
+      <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="md3" checked><label class="form-check-label" for="md3">Toshkent</label></div>
+      <button class="btn ep-btn-primary w-100 mt-3">Natijalarni ko'rsatish</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ep-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a class="navbar-brand ep-logo" href="index.html">Event<span>Pro</span></a>
+        <p class="ep-muted mt-3">O'zbekistonda tadbirlarni topish va chipta sotib olish uchun zamonaviy platforma.</p>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6 class="ep-footer-title">Sahifalar</h6>
+        <ul class="ep-footer-list"><li><a href="index.html">Bosh sahifa</a></li><li><a href="events.html">Tadbirlar</a></li></ul>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6 class="ep-footer-title">Yordam</h6>
+        <ul class="ep-footer-list"><li><a href="#">Aloqa</a></li><li><a href="#">FAQ</a></li></ul>
+      </div>
+    </div>
+    <hr class="ep-footer-divider">
+    <p class="ep-muted small mb-0">© 2026 EventPro. Barcha huquqlar himoyalangan.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="events.js"></script>
+</body>
+</html>

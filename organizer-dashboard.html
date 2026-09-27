@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tashkilotchi paneli — EventPro</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.47.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="padding-top:0;">
+
+<div class="ep-dash-layout">
+  <!-- SIDEBAR -->
+  <div class="ep-sidebar d-none d-lg-flex flex-column">
+    <a class="navbar-brand ep-logo mb-4 px-2" href="index.html">Event<span>Pro</span></a>
+    <a href="#" class="ep-sidebar-link active"><i class="ti ti-layout-dashboard"></i>Bosh panel</a>
+    <a href="#" class="ep-sidebar-link"><i class="ti ti-calendar-event"></i>Tadbirlarim</a>
+    <a href="#" class="ep-sidebar-link"><i class="ti ti-plus"></i>Yangi tadbir</a>
+    <a href="#" class="ep-sidebar-link"><i class="ti ti-chart-bar"></i>Statistika</a>
+    <a href="#" class="ep-sidebar-link"><i class="ti ti-users"></i>Ishtirokchilar</a>
+    <a href="#" class="ep-sidebar-link"><i class="ti ti-settings"></i>Sozlamalar</a>
+    <a href="index.html" class="ep-sidebar-link mt-auto"><i class="ti ti-logout"></i>Chiqish</a>
+  </div>
+
+  <!-- MOBILE TOP BAR -->
+  <div class="d-lg-none w-100">
+    <nav class="navbar navbar-dark ep-navbar" style="position:relative;">
+      <div class="container-fluid">
+        <a class="navbar-brand ep-logo" href="index.html">Event<span>Pro</span></a>
+        <button class="navbar-toggler border-0 text-white" data-bs-toggle="offcanvas" data-bs-target="#dashMenu"><i class="ti ti-menu-2 fs-3"></i></button>
+      </div>
+    </nav>
+  </div>
+  <div class="offcanvas offcanvas-start ep-offcanvas" tabindex="-1" id="dashMenu">
+    <div class="offcanvas-header"><h5>Menyu</h5><button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+    <div class="offcanvas-body">
+      <a href="#" class="ep-sidebar-link active"><i class="ti ti-layout-dashboard"></i>Bosh panel</a>
+      <a href="#" class="ep-sidebar-link"><i class="ti ti-calendar-event"></i>Tadbirlarim</a>
+      <a href="#" class="ep-sidebar-link"><i class="ti ti-plus"></i>Yangi tadbir</a>
+      <a href="#" class="ep-sidebar-link"><i class="ti ti-chart-bar"></i>Statistika</a>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="ep-dash-main">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+      <div>
+        <h2 class="ep-h2" style="font-size:26px;">Xush kelibsiz, Star Events!</h2>
+        <p class="ep-muted mb-0">Tadbirlaringiz statistikasi va boshqaruv paneli</p>
+      </div>
+      <button class="btn ep-btn-primary" data-bs-toggle="modal" data-bs-target="#newEventModal"><i class="ti ti-plus me-1"></i>Yangi tadbir yaratish</button>
+    </div>
+
+    <!-- METRICS -->
+    <div class="row g-3 mb-4">
+      <div class="col-6 col-lg-3">
+        <div class="ep-metric-card">
+          <div class="ep-metric-icon" style="background:rgba(124,58,237,0.15);color:var(--purple);"><i class="ti ti-cash"></i></div>
+          <div class="ep-metric-label">Jami sotuvlar</div>
+          <div class="ep-metric-value">45.6M so'm</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="ep-metric-card">
+          <div class="ep-metric-icon" style="background:rgba(56,189,248,0.15);color:var(--sky);"><i class="ti ti-ticket"></i></div>
+          <div class="ep-metric-label">Sotilgan chiptalar</div>
+          <div class="ep-metric-value">1,240</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="ep-metric-card">
+          <div class="ep-metric-icon" style="background:rgba(236,72,153,0.15);color:var(--pink);"><i class="ti ti-calendar-event"></i></div>
+          <div class="ep-metric-label">Faol tadbirlar</div>
+          <div class="ep-metric-value">8</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="ep-metric-card">
+          <div class="ep-metric-icon" style="background:rgba(34,197,94,0.15);color:var(--success);"><i class="ti ti-star"></i></div>
+          <div class="ep-metric-label">O'rtacha reyting</div>
+          <div class="ep-metric-value">4.8</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHART -->
+    <div class="ep-chart-card mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h6 style="font-weight:600;">Sotuv dinamikasi (oxirgi 30 kun)</h6>
+        <span class="ep-muted small">Avgust 2026</span>
+      </div>
+      <svg viewBox="0 0 600 160" style="width:100%;height:160px;">
+        <defs>
+          <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <polyline fill="none" stroke="#EC4899" stroke-width="3" points="0,120 60,100 120,110 180,70 240,85 300,50 360,60 420,30 480,45 540,20 600,35"/>
+        <polygon fill="url(#grad1)" points="0,120 60,100 120,110 180,70 240,85 300,50 360,60 420,30 480,45 540,20 600,35 600,160 0,160"/>
+      </svg>
+    </div>
+
+    <!-- EVENTS TABLE -->
+    <div class="ep-chart-card">
+      <h6 class="mb-3" style="font-weight:600;">Tadbirlarim</h6>
+      <div style="overflow-x:auto;">
+      <table class="ep-table">
+        <thead><tr><th></th><th>Nomi</th><th>Sana</th><th>Sotilgan / Jami</th><th>Status</th><th></th></tr></thead>
+        <tbody>
+          <tr>
+            <td><img src="https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?q=80&w=100&auto=format&fit=crop"></td>
+            <td class="fw-600">Yulduzlar kechasi</td>
+            <td class="ep-muted">12-avgust</td>
+            <td>1,240 / 1,500</td>
+            <td><span class="ep-status ep-status-active">Faol</span></td>
+            <td><i class="ti ti-edit ep-table-action"></i><i class="ti ti-trash ep-table-action"></i></td>
+          </tr>
+          <tr>
+            <td><img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=100&auto=format&fit=crop"></td>
+            <td class="fw-600">Digital Business Forum</td>
+            <td class="ep-muted">16-avgust</td>
+            <td>320 / 800</td>
+            <td><span class="ep-status ep-status-pending">Kutilmoqda</span></td>
+            <td><i class="ti ti-edit ep-table-action"></i><i class="ti ti-trash ep-table-action"></i></td>
+          </tr>
+          <tr>
+            <td><img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=100&auto=format&fit=crop"></td>
+            <td class="fw-600">Stand-up Comedy Show</td>
+            <td class="ep-muted">2-avgust</td>
+            <td>600 / 600</td>
+            <td><span class="ep-status ep-status-done">Yakunlangan</span></td>
+            <td><i class="ti ti-edit ep-table-action"></i><i class="ti ti-trash ep-table-action"></i></td>
+          </tr>
+          <tr>
+            <td><img src="https://images.unsplash.com/photo-1508997449629-303059a039c0?q=80&w=100&auto=format&fit=crop"></td>
+            <td class="fw-600">Startup Pitch Night</td>
+            <td class="ep-muted">5-sentabr</td>
+            <td>0 / 300</td>
+            <td><span class="ep-status ep-status-cancelled">Bekor qilingan</span></td>
+            <td><i class="ti ti-edit ep-table-action"></i><i class="ti ti-trash ep-table-action"></i></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEW EVENT MODAL -->
+<div class="modal fade ep-modal" id="newEventModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Yangi tadbir yaratish</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="ep-upload-box mb-3">
+          <i class="ti ti-cloud-upload"></i>
+          <div class="fw-600 text-white">Rasm yuklash</div>
+          <div class="ep-muted small">PNG, JPG — maksimal 5MB</div>
+        </div>
+        <div class="row g-3">
+          <div class="col-12">
+            <div class="form-floating">
+              <input type="text" class="form-control" placeholder="Tadbir nomi" id="evname">
+              <label for="evname">Tadbir nomi</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Tavsif" style="height:90px" id="evdesc"></textarea>
+              <label for="evdesc">Tavsif</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <select class="form-select">
+              <option>Kategoriya tanlang</option>
+              <option>Konsert</option>
+              <option>Seminar</option>
+              <option>Konferensiya</option>
+              <option>Sport</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="text" class="form-control" placeholder="Joylashuv" id="evloc">
+              <label for="evloc">Joylashuv</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="datetime-local" class="form-control" id="evstart">
+              <label for="evstart">Boshlanish sanasi</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="datetime-local" class="form-control" id="evend">
+              <label for="evend">Tugash sanasi</label>
+            </div>
+          </div>
+        </div>
+
+        <h6 class="mt-4 mb-2" style="font-weight:600;">Chipta turlari</h6>
+        <div class="ep-ticket-option">
+          <div class="row g-2 w-100">
+            <div class="col-5"><input type="text" class="form-control form-control-sm" placeholder="Nomi" value="Oddiy chipta"></div>
+            <div class="col-4"><input type="text" class="form-control form-control-sm" placeholder="Narxi" value="150 000"></div>
+            <div class="col-3"><input type="text" class="form-control form-control-sm" placeholder="Miqdori" value="500"></div>
+          </div>
+        </div>
+        <a href="#" class="ep-link-more">+ Yana chipta turi qo'shish</a>
+      </div>
+      <div class="modal-footer">
+        <button class="btn ep-btn-ghost">Qoralama sifatida saqlash</button>
+        <button class="btn ep-btn-primary">Chop etish</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
